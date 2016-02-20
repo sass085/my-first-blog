@@ -9,6 +9,16 @@
 <div>
 <ul><li>1 brain</li><li>2 eyes</li></ul>
 <strong>Woo</strong>
-{{posts}}
+<div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
